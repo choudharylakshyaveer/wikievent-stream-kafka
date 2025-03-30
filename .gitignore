@@ -1,0 +1,3 @@
+# Project exclude paths
+/wikievent-consumer/target/
+/wikievent-producer/target/

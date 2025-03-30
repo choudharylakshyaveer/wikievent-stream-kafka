@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for wikievent-stream-kafka" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/edge-SNAPSHOT/lombok-edge-SNAPSHOT.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/edge-SNAPSHOT/lombok-edge-SNAPSHOT.jar" />
+        </processorPath>
+        <module name="wikievent-producer" />
+        <module name="wikievent-consumer" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="wikievent-consumer" options="-parameters" />
+      <module name="wikievent-producer" options="-parameters" />
+      <module name="wikievent-stream-kafka" options="-parameters" />
+    </option>
+  </component>
+</project>
